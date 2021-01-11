@@ -5,37 +5,34 @@
   <meta charset="UTF-8">
   <title>ML API</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+  <link rel="stylesheet" href="/static/css/style.css">
+
 </head>
 
 <body>
- <div class="login">
-	<h1>Predicting Motion Picture Box-Office Performance</h1>
-
-     <!-- Main Input For Receiving Query to our ML -->
+    {{ prediction_text }}
+  <div class="form animated flipInX">
+    <h2>Predicting Motion Picture Box-Office Performance</h2>
+    <!-- input form for ML model -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="a" placeholder="Feature 1" required="required" />
-        <input type="text" name="b" placeholder="Feature 2" required="required" />
-		<input type="text" name="c" placeholder="Feature 3" required="required" />
-    	<input type="text" name="d" placeholder="Feature 4" required="required" />
-        <input type="text" name="e" placeholder="Feature 5" required="required" />
-		<input type="text" name="f" placeholder="Feature 6" required="required" />
-    	<input type="text" name="g" placeholder="Feature 7" required="required" />
-        <input type="text" name="h" placeholder="Feature 8" required="required" />
-		<input type="text" name="i" placeholder="Feature 9" required="required" />
-    	<input type="text" name="j" placeholder="Feature 10" required="required" />
+      <input type="text" name="a" placeholder="Feature 1" required="required" />
+      <input type="text" name="b" placeholder="Feature 2" required="required" />
+      <input type="text" name="c" placeholder="Feature 3" required="required" />
+      <input type="text" name="d" placeholder="Feature 4" required="required" />
+      <input type="text" name="e" placeholder="Feature 5" required="required" />
+      <input type="text" name="f" placeholder="Feature 6" required="required" />
+      <input type="text" name="g" placeholder="Feature 7" required="required" />
+      <input type="text" name="h" placeholder="Feature 8" required="required" />
+      <input type="text" name="i" placeholder="Feature 9" required="required" />
+      <input type="text" name="j" placeholder="Feature 10" required="required" />
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
-
-   <br>
-   <br>
-   {{ prediction_text }}
-
- </div>
+  </div>
 
 
 </body>
