@@ -27,7 +27,7 @@ def predict():
         3: '$60+ Million'
     }
 
-    return render_template('index.html', prediction_text='Predicted Return: {}'.format(possible_scores[output]))
+    return render_template('./templates/index.html', prediction_text='Predicted Return: {}'.format(possible_scores[output]))
 
 
 if __name__ == "__main__":
